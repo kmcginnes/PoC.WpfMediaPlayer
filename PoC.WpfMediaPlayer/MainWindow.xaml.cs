@@ -56,6 +56,7 @@ namespace PoC.WpfMediaPlayer
             {
                 var uri = new Uri(openFileDialog.FileName, UriKind.Absolute);
                 mePlayer.Source = uri;
+                mePlayer.Play();
             }
         }
     }
