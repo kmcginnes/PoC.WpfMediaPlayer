@@ -1,26 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using Microsoft.Win32;
 
 namespace PoC.WpfMediaPlayer
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {
@@ -65,7 +50,7 @@ namespace PoC.WpfMediaPlayer
 
             var openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Video files (*.ts)|*.ts|All files (*.*)|*.*";
-            openFileDialog.InitialDirectory = @"C:\WatchGuardVideo\Videos";
+            openFileDialog.InitialDirectory = @"C:\";
             var confirm = openFileDialog.ShowDialog();
             if (confirm.HasValue && confirm.Value)
             {
